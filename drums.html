@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Барабаны - Перкуссия</title>
+  <link rel="stylesheet" href="design.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.jpg" alt="Логотип Перкуссия" />
+    <span>Перкуссия</span>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="login.html">Вход/Регистрация</a></li>
+      <li><a href="cart.html">Корзина</a></li>
+      <li><a href="status.html">Статус заказа</a></li>
+      <li><a href="obr.html">Обратная связь</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Барабаны</h1>
+
+  <div class="products-container">
+    <!-- Карточка товара 1 -->
+    <div class="product-card" onclick="showProductDetails('Барабанный комплект DB-300', 'drum.jpg', 25000, 'Описание: профессиональный комплект барабанов для начинающих и опытных музыкантов.')">
+      <img src="drum.jpg" alt="Барабанный комплект DB-300" class="product-image" />
+      <div class="product-info">
+        <p class="product-category">Барабаны</p>
+        <h3 class="product-name">Барабанный комплект DB-300</h3>
+        <p class="product-price">Цена: 25 000 ₽</p>
+      </div>
+    </div>
+
+    <!-- Карточка товара 2 -->
+    <div class="product-card" onclick="showProductDetails('Электронные барабаны DrumPro 500', 'drum2.jpg', 35000, 'Описание: электронные барабаны с множеством настроек и звуков.')">
+      <img src="drum2.jpg" alt="Электронные барабаны DrumPro 500" class="product-image" />
+      <div class="product-info">
+        <p class="product-category">Барабаны</p>
+        <h3 class="product-name">Электронные барабаны DrumPro 500</h3>
+        <p class="product-price">Цена: 35 000 ₽</p>
+      </div>
+    </div>
+
+    <!-- Карточка товара 3 -->
+    <div class="product-card" onclick="showProductDetails('Барабанная установка BD-700', 'drum3.jpg', 40000, 'Описание: профессиональная барабанная установка с улучшенной акустикой.')">
+      <img src="drum3.jpg" alt="Барабанная установка BD-700" class="product-image" />
+      <div class="product-info">
+        <p class="product-category">Барабаны</p>
+        <h3 class="product-name">Барабанная установка BD-700</h3>
+        <p class="product-price">Цена: 40 000 ₽</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Модальное окно с описанием товара -->
+<div id="product-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeProductModal()">&#10006;</span>
+    <div class="modal-header">
+      <h2 id="modal-product-name">Название товара</h2>
+      <div class="modal-rating">
+        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span>
+        <p>4.0 / 5 (200 отзывов)</p>
+      </div>
+    </div>
+    <div class="modal-body">
+      <img id="modal-product-image" src="" alt="Фото товара" />
+      <div class="modal-info">
+        <p id="modal-product-description">Описание товара</p>
+        <p id="modal-product-availability">Наличие: В наличии</p>
+        <p id="modal-product-price">Цена: <span id="modal-price">0 ₽</span></p>
+        <button class="add-to-cart" onclick="addToCart()">Добавить в корзину</button>
+        <h4>Комплектация:</h4>
+        <ul id="modal-product-composition">
+          <li>Барабан 1 шт</li>
+          <li>Подставка 1 шт</li>
+          <li>Молнии для установки 2 шт</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2024 Перкуссия. Все права защищены.</p>
+</footer>
+
+<script src="catalog.js"></script>
+</body>
+</html>
